@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from "redux";
 import { Provider } from 'react-redux';
-import {createStore} from 'react';
 
-import  { Moviereducer }  from './Redux/Reducers';
- 
 
-   const  store=createStore(Moviereducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-
+import  {  moviereducer}  from './Redux/Reducers';
+const store = createStore(
+  moviereducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+   
 ReactDOM.render(
     <Provider store={store}>
     <App />

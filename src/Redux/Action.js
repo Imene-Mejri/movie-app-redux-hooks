@@ -1,10 +1,27 @@
-import {SEARCH} from './Action-types'
+import {SEARCH,ADD,SEARCH_RATE} from './Action-types'
 
 
 
-const searchhandle =({ID})=>{
+
+ export const searchhandler =(title)=>{
     return {
     type: SEARCH,
-    payload:{ID}
+    payload:title
+   
+   
 }
+
+}
+
+ export const addhandler =(nwemovie)=>{
+    return{
+        type:ADD,
+        payload:nwemovie
+    }
+}
+export const ratehandller=(payload)=>{
+    return{
+        type:SEARCH_RATE,
+        payload
+    }
 }
